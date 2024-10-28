@@ -9,30 +9,12 @@
 
 import { useEffect, useState } from "react";
 import "./App.css";
-import { fakeAPI } from "./util";
-import { Sort } from "./Sort";
+
 function App() {
-  const [numbers, setNumbers] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  const fetchData = async () => {
-    const data = await fakeAPI();
-    setNumbers(data);
-    setLoading(false);
-  };
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  console.log(`This is the number ${numbers}`);
   return (
     <>
       <div>
         <h1>INTERVIEW REACT</h1>
-        {loading
-          ? "Loading..."
-          : numbers?.map((number, index) => <span key={index}> {number}</span>)}
-        <Sort data={numbers} />
       </div>
     </>
   );
