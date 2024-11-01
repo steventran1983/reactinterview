@@ -3,8 +3,9 @@
   Requirement: 
     1. Get data from the a dummy API (fakeAPI) in util.js fakeAPI function
     2. Print Loading ... during call API
-    3. Show up the 10 random numbers in the UI after the API call
-    4. Sort the numbers in ascending order and show in UI 
+    3. Show up all the movie 
+    4. Implenenting complete Search functionality
+      - When user type in the search box, the list of movies should be show up based on the search keyword 
 */
 
 import { useEffect, useState } from "react";
@@ -15,6 +16,7 @@ function App() {
     <>
       <div>
         <h1>INTERVIEW REACT</h1>
+        <input type="text" placeholder="Search..." />
       </div>
     </>
   );
